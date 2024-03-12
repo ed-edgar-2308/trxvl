@@ -19,7 +19,7 @@ A simple landing page - Trxvl. 📚
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Agency | Home](https://ralph2308s.github.io/trxvl/)
+- [Trxvl | Home](https://ralph2308s.github.io/trxvl/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
