@@ -1,0 +1,749 @@
+:root {
+  --main-color: #fff;
+  --search-color: #ffffff40;
+  --btn-color: #2659c3;
+  --footer-bg-color: #141414;
+  --footer-color: #808080;
+}
+
+@font-face {
+  font-family: "Netflix Sans";
+  src: url(../font/netflix-sans-font/NetflixSans-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Netflix Sans";
+  src: url(../font/netflix-sans-font/NetflixSans-Medium.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Netflix Sans";
+  src: url(../font/netflix-sans-font/NetflixSans-Light.woff2);
+  font-weight: 300;
+}
+
+html {
+  color: var(--main-color);
+  font-family: Helvetica, sans-serif;
+}
+
+.layout {
+  width: 124.651rem;
+}
+
+#bg {
+  background: url(../img/bg.png) no-repeat center / cover;
+  width: 100%;
+  height: 93.192rem;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+#bg img {
+  width: 100%;
+  height: 12.124rem;
+  position: absolute;
+  bottom: -4px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.657rem 0;
+  width: 140.814rem;
+  max-width: 92%;
+  margin: 0 auto;
+}
+
+header img {
+  display: none;
+}
+
+.logo {
+  font-size: 3.542rem;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.logo:hover {
+  transform: scale(1.6);
+}
+
+nav a {
+  padding: 0.886rem;
+  font-size: 1.771rem;
+  margin-right: 2.657rem;
+  position: relative;
+}
+
+nav a::after,
+.categories__list a::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1.2px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  transform: scaleX(0);
+  transition: all 0.4s;
+}
+
+nav a:hover::after,
+.categories__list a:hover::after {
+  transform: scaleX(1);
+}
+
+nav a:last-child {
+  font-weight: bold;
+  margin-right: unset;
+}
+
+nav .active {
+  border-bottom: 1.11px solid var(--main-color);
+}
+
+h1.layout {
+  font-size: 7.971rem;
+  font-weight: bold;
+  margin-top: 4.42rem;
+}
+
+.search {
+  background-color: var(--search-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 3.542rem;
+  padding: 0.886rem 1.771rem;
+  border-radius: 17.71px;
+  backdrop-filter: blur(35.42px);
+  margin-top: 4.405rem;
+}
+
+.search__input,
+.search__checkin,
+.search__checkout,
+.search__1room-2adults {
+  display: flex;
+  align-items: center;
+  gap: 0.886rem;
+  font-size: 1.771rem;
+  cursor: pointer;
+}
+
+.search__input,
+.search__checkin,
+.search__checkout {
+  padding: 1.328rem 0.886rem;
+}
+
+.search__checkin,
+.search__checkout,
+.search__1room-2adults {
+  transition: all 0.2s;
+}
+
+.search__checkin:hover,
+.search__checkout:hover,
+.search__1room-2adults:hover {
+  color: rgb(142, 192, 153);
+}
+
+.search__input {
+  flex: 1;
+  cursor: unset;
+}
+
+.search__input input {
+  background: transparent;
+  color: var(--main-color);
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.search button {
+  background-color: var(--main-color);
+  padding: 1.328rem 3.542rem;
+  border: none;
+  border-radius: 35.42px;
+  color: var(--btn-color);
+  font-size: 1.771rem;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.search button:hover {
+  background-color: rgb(215, 240, 221);
+}
+
+.search-mobile {
+  display: none;
+}
+
+h2 {
+  font-size: 3.542rem;
+}
+
+.categories h2 {
+  margin-top: 4.428rem;
+}
+
+.categories__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 0.867rem;
+  margin-top: 3.539rem;
+}
+
+.categories__list a {
+  color: #b6b6b6;
+  padding-bottom: 1.763rem;
+  font-size: 1.771rem;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.categories__list a:hover {
+  transform: scale(1.2);
+}
+
+.categories__list img {
+  display: block;
+  margin: 0 auto 1.771rem;
+}
+
+.vacation h2 {
+  margin-top: 6.199rem;
+}
+
+.browse .list,
+.vacation .list {
+  height: 24rem;
+}
+
+.list {
+  display: flex;
+  gap: 2.657rem;
+  width: 137.271rem;
+  max-width: 94vw;
+  padding-left: 0.8rem;
+  overflow-x: scroll;
+  margin-top: 4.428rem;
+}
+
+.browse .list div,
+.vacation .list div {
+  flex-shrink: 0;
+  width: 34.318rem;
+  height: 22.141rem;
+  border-radius: 8.86px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.browse .list p,
+.vacation .list p {
+  height: 100%;
+  font-size: 2.657rem;
+  font-family: "Netflix Sans", sans-serif;
+  font-weight: 500;
+  padding-top: 16.163rem;
+  padding-left: 2.657rem;
+  transition: all 0.4s;
+}
+
+.browse .list p:hover,
+.vacation .list p:hover {
+  transform: scale(1.06);
+}
+
+.vacation .list div:nth-child(1) p {
+  background: url(../img/image\ 18.png);
+}
+
+.vacation .list div:nth-child(2) p {
+  background: url(../img/image\ 18-1.png);
+}
+
+.vacation .list div:nth-child(3) p {
+  background: url(../img/image\ 18-2.png);
+}
+
+.vacation .list div:nth-child(4) p {
+  background: url(../img/image\ 18-3.png) no-repeat center / cover;
+}
+
+.offers,
+.connect {
+  color: #000;
+}
+
+.offers h2,
+.connect h2 {
+  margin-top: 8.856rem;
+}
+
+.offers .list {
+  height: 30.6rem;
+}
+
+.offers__item {
+  display: flex;
+  flex-shrink: 0;
+  gap: 2.657rem;
+  padding: 2.657rem 1.771rem;
+  width: 76.164rem;
+  height: 28.67rem;
+  border-radius: 17.71px;
+  box-shadow: 0 4.43px 17.71px 0 #9e9e9e45;
+  cursor: pointer;
+}
+
+.offers__item img {
+  border-radius: 23.23px;
+}
+
+.offers__item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  font-family: "Netflix Sans", sans-serif;
+}
+
+.offers__item p {
+  color: #00000060;
+  font-size: 1.771rem;
+}
+
+.offers__item h3 {
+  font-size: 2.657rem;
+  font-weight: 500;
+  margin-top: 0.443rem;
+}
+
+.offers__item p:last-of-type {
+  margin-top: 1.771rem;
+}
+
+.offers__item a {
+  background-color: var(--btn-color);
+  color: var(--main-color);
+  padding: 1.771rem 3.542rem;
+  font-size: 1.771rem;
+  border-radius: 35.42px;
+  transition: all 0.4s;
+}
+
+.offers__item a:hover {
+  background-color: var(--main-color);
+  color: #000;
+  border: 1px solid #000;
+}
+
+.browse h2 {
+  color: #000;
+  margin-top: 8.856rem;
+}
+
+.browse .list div:nth-child(1) p {
+  background: url(../img/image\ 20.png);
+}
+
+.browse .list div:nth-child(2) p {
+  background: url(../img/image\ 20-1.png);
+}
+
+.browse .list div:nth-child(3) p {
+  background: url(../img/image\ 20-2.png);
+}
+
+.browse .list div:nth-child(4) p {
+  background: url(../img/image\ 20-3.png) no-repeat center / cover;
+}
+
+.plan {
+  background: url(../img/image\ 21.png) no-repeat center / cover;
+  padding: 8.856rem 8.967rem;
+  height: 43.728rem;
+  margin-top: 16.827rem;
+  border-radius: 26.57px;
+  cursor: pointer;
+}
+
+.plan h2 {
+  font-size: 6.199rem;
+  max-width: 75.146rem;
+}
+
+.plan p {
+  font-family: "Netflix Sans", sans-serif;
+  font-size: 3.542rem;
+  margin-top: 2.627rem;
+}
+
+.connect .list {
+  height: 40.4rem;
+  gap: 1.771rem;
+}
+
+.connect__item {
+  flex-shrink: 0;
+  padding: 1.771rem;
+  width: 37.86rem;
+  height: 38.111rem;
+  border-radius: 17.71px;
+  box-shadow: 0 4.43px 17.71px 0 #9e9e9e45;
+  cursor: pointer;
+}
+
+.connect__item:hover img {
+  transform: scale(1.2);
+}
+
+.connect__item figure {
+  border-radius: 8.86px;
+  overflow: hidden;
+}
+
+.connect__item img {
+  transition: all 0.4s;
+}
+
+.connect div h4 {
+  font-family: "Netflix Sans", sans-serif;
+  font-size: 2.657rem;
+  font-weight: 400;
+  margin-top: 2.657rem;
+}
+
+.connect div p {
+  color: #00000060;
+  font-family: "Netflix Sans", sans-serif;
+  font-size: 1.771rem;
+  margin-top: 0.886rem;
+}
+
+.banner {
+  background: url(../img/image\ 41.png) no-repeat center / cover;
+  padding-top: 4.4%;
+  height: 60.193rem;
+  margin-top: 9.766rem;
+  overflow: hidden;
+}
+
+.banner .layout {
+  display: flex;
+  gap: 3.943rem;
+}
+
+.banner .layout div h2 {
+  font-size: 5.314rem;
+}
+
+.banner__info > p {
+  font-size: 2.657rem;
+  margin-top: 2.657rem;
+}
+
+.banner__info .get {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3.53rem;
+}
+
+.banner__info .get__left > a {
+  display: inline-block;
+  padding: 0.886rem 1.771rem;
+  font-size: 2.241rem;
+  margin-right: 1.657rem;
+}
+
+.banner__info .get__left .in,
+.banner__info .get__left .active {
+  background-color: #ffffff60;
+  backdrop-filter: blur(35.42px);
+  border-radius: 17.71px;
+}
+
+.banner__info .get__left > p {
+  font-size: 1.55rem;
+  margin-top: 1.771rem;
+}
+
+.banner__info .get__left .in {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.886rem 1.771rem;
+  margin-top: 1.771rem;
+}
+
+.banner__info .get__left .in div {
+  max-width: 60%;
+}
+
+.banner__info .get__left .in input,
+.banner__info .get__left .in select {
+  background: transparent;
+  border: none;
+  font-size: 1.771rem;
+  margin-right: 0.886rem;
+}
+
+.banner__info .get__left .in select {
+  appearance: none;
+  color: #ffffff90;
+}
+
+.banner__info .get__left .in input {
+  outline: none;
+  margin-right: unset;
+  color: var(--main-color);
+  max-width: 100%;
+}
+
+.banner__info .get__left .in a {
+  background-color: var(--main-color);
+  color: var(--btn-color);
+  display: block;
+  padding: 1.328rem 8%;
+  font-size: 1.771rem;
+  font-weight: bold;
+  border-radius: 35.42px;
+  transition: all 0.2s;
+}
+
+.banner__info .get__left .in a:hover {
+  background-color: rgb(215, 240, 221);
+}
+
+.banner__info .get__or,
+.banner__info .get__right {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.771rem;
+  align-items: center;
+}
+
+.banner__info .get__or {
+  justify-content: space-between;
+}
+
+.banner__info .get__right {
+  justify-content: center;
+  min-width: 12rem;
+}
+
+footer {
+  background-color: var(--footer-bg-color);
+  padding: 4.813rem 0;
+  margin-top: 3.525rem;
+}
+
+footer .layout {
+  display: flex;
+  gap: 10.361rem;
+}
+
+footer .info {
+  color: var(--footer-color);
+  flex: 1;
+}
+
+footer .info__top {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1rem;
+}
+
+footer .info__top div p:not(:first-child) {
+  margin-top: 1.661rem;
+}
+
+footer .info__bot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.378rem;
+}
+
+footer .info__bot .left a {
+  display: inline-block;
+  padding: 1.107rem 1.661rem;
+  border: 1.11px solid #808080;
+}
+
+footer .info__bot .left p {
+  font-size: 1.218rem;
+  margin-top: 2.296rem;
+}
+
+footer .info__bot .right a:not(:last-child) {
+  margin-right: 2.214rem;
+}
+
+@media (max-width: 76.8em) {
+  .banner .layout {
+    gap: unset;
+  }
+  .banner .layout div h2 {
+    font-size: 3.6rem;
+  }
+  .banner__info > p {
+    font-size: 1.6rem;
+  }
+  .banner__info .get__or {
+    display: none;
+  }
+  .banner__info .get {
+    flex-wrap: wrap;
+  }
+  .banner__info .get__right {
+    width: 60%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .banner__info .get__left a {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 42.8em) {
+  #bg {
+    height: 75rem;
+  }
+  #bg img {
+    height: 4.3rem;
+  }
+  header {
+    padding-top: 4.85rem;
+  }
+  header img {
+    display: block;
+    width: 4rem;
+    cursor: pointer;
+  }
+  header a {
+    margin: 0 auto;
+  }
+  header nav {
+    display: none;
+  }
+  h1.layout {
+    font-size: 3.2rem;
+    margin-top: 2.15rem;
+  }
+  .search {
+    display: none;
+  }
+  .search-mobile {
+    display: block;
+  }
+  .search-mobile > div:not(:first-child) {
+    margin-top: 1.6rem;
+  }
+  .search__input,
+  .search__check,
+  .search__1room-2adults {
+    background-color: var(--search-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.05rem;
+    border-radius: 32px;
+    backdrop-filter: blur(32px);
+    margin-top: 2.4rem;
+  }
+  .search__input {
+    padding: 1.3rem 0;
+  }
+  .search__input input {
+    width: unset;
+  }
+  .search__check {
+    padding: 0.121rem 0;
+  }
+  .search__1room-2adults {
+    padding: 1.45rem 0;
+  }
+  button {
+    background-color: var(--btn-color);
+    color: var(--main-color);
+    padding: 1.3rem 16.3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 1.6rem;
+    border: none;
+    border-radius: 32px;
+    transition: all 0.4s;
+  }
+  button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  .categories h2 {
+    margin-top: 6.7rem;
+  }
+  .categories__list {
+    overflow-x: scroll;
+  }
+  .vacation h2 {
+    color: #000;
+  }
+  .vacation h2,
+  .browse h2,
+  .offers h2,
+  .connect h2 {
+    margin-top: 3.2rem;
+  }
+  .list {
+    margin-top: 2.4rem;
+  }
+  .plan {
+    margin-top: 3.2rem;
+    padding: 4rem;
+  }
+  .plan h2 {
+    font-size: 3.6rem;
+  }
+  .plan p {
+    font-size: 2.4rem;
+  }
+  .banner {
+    margin-top: 3.2rem;
+  }
+  .banner div {
+    flex-wrap: wrap;
+  }
+  .banner div > img {
+    display: none;
+  }
+  footer .layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  footer .info__bot .left p {
+    display: inline-block;
+  }
+  footer .info__bot .right a {
+    display: inline-block;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+  footer .info__bot .right a:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
